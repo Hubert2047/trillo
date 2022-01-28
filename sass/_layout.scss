@@ -12,6 +12,7 @@
     display         : flex;
     justify-content : space-between;
     align-items     : center;
+    border-bottom   : var(--line);
 }
 
 .content {
@@ -30,5 +31,70 @@
 .hotel-view {
     background-color: #fff;
     flex            : 1;
-    height          : 50rem;
 }
+
+.detail {
+    display         : flex;
+    padding         : 3rem;
+    font-size       : 1.4rem;
+    color           : var(--color-grey-dark-2);
+    font-weight     : 300;
+    background-color: var(--color-grey-light-3);
+}
+
+.decription {
+    flex            : 0 0 60%;
+    margin-right    : 3rem;
+    padding         : 1.6rem;
+    background-color: var(--color-grey-light-1);
+
+}
+
+.paragraph {
+    margin-bottom: 1.6rem;
+}
+
+.list-services {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    padding        : 2.4rem 0;
+    margin         : 2.4rem 0;
+    border-top     : var(--line);
+    border-bottom  : var(--line);
+
+    &__item {
+        list-style   : none;
+        flex         : 0 0 50%;
+        margin-bottom: .5rem;
+        display      : flex;
+        align-items  : center;
+
+        &::before {
+            content            : "";
+            display            : inline-block;
+            width              : 1rem;
+            height             : 1rem;
+            margin-right       : .5rem;
+            // background-image: url(../img/chevron-thin-right.svg);
+            // background-size: cover;
+            background-color   : var(--color-primary);
+            -webkit-mask-image : url(../img/chevron-thin-right.svg);
+            -webkit-mask-size  : cover;
+
+        }
+    }
+}
+
+.recommend {
+    &__count {}
+
+    &__friends {}
+}
+
+.user-review {
+    flex            : 1;
+    background-color: var(--color-grey-light-4);
+}
+
+.cta {}

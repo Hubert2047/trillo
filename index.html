@@ -7,7 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="shortcut photo" type="image/png" href="img/favphoto.png">
 
     <title>trillo &mdash; Your all-in-one booking app</title>
 </head>
@@ -20,7 +20,7 @@
                 <input type="text" class="search__input" placeholder="Search hotel">
                 <button class="search__button">
                     <svg class="search__icon">
-                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                        <use xlink:href="img/sprite.svg#photo-search"></use>
                     </svg>
                 </button>
             </form>
@@ -88,7 +88,7 @@
                     <figure class="gallery__item"><img src="img/hotel-3.jpg" alt="photo of hotel 3" class="gallery__photo"></figure>
                 </div>
                 <div class="overview">
-                    <h1 class="overview__heading">Hotel las palmas</h1>                 
+                    <h1 class="overview__heading">The Oriental Jade Hotel</h1>                 
                     <div class="overview__star">
                         <svg class="overview__star-icon">
                             <use xlink:href="img/sprite.svg#icon-star"></use>
@@ -109,11 +109,47 @@
                             <use xlink:href="img/sprite.svg#icon-star"></use>
                         </svg>
                     </div>
-                    <div class="overview__location">Ha Noi,Viet Nam</div>
+                    <div class="overview__location">
+                        <svg class="overview__location-icon">
+                            <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                        </svg>
+                        <button>Ha Noi,Viet Nam</button>
+                    </div>
                     <div class="overview__rating">
                         <span class="overview__rating-average">8.6</span>
                         <span class="overview__rating-count">1000 votes</span>
                     </div>
+                </div>
+                <div class="detail">
+                    <div class="decription">
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fuga corporis quasi perferendis aspernatur molestias praesentium, quam aliquid illo asperiores nulla repudiandae excepturi, vitae incidunt soluta corrupti nobis. Pariatur, esse!
+                        </p>
+                        <p class="paragraph">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut iusto numquam quo corrupti, itaque libero illo est distinctio deleniti delectus temporibus sit maxime maiores impedit odio, earum, harum eaque iste?
+                        </p>
+                        <ul class="list-services">
+                            <li class="list-services__item">Close to the beach</li>
+                            <li class="list-services__item">Breakfast included</li>
+                            <li class="list-services__item">Free airport shuttle</li>
+                            <li class="list-services__item">Free wifi in all rooms</li>
+                            <li class="list-services__item">Air conditioning and heating</li>
+                            <li class="list-services__item">Pets allowed</li>
+                            <li class="list-services__item">We speak all languages</li>
+                            <li class="list-services__item">Perfect for families</li>
+                        </ul>
+                        <div class="recommend">
+                            <p class="recommend__count">Lucy and 3 other friends recommend this hotel.</p>
+                            <div class="recommend__friend">
+                                <img src="img/user-3.jpg" alt="friend 1 class="recommend__friend-photo">
+                                <img src="img/user-4.jpg" alt="friend 2 class="recommend__friend-photo">
+                                <img src="img/user-5.jpg" alt="friend 3 class="recommend__friend-photo">
+                                <img src="img/user-6.jpg" alt="friend 4 class="recommend__friend-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-review"></div>
+                    <div class="cta"></div>
                 </div>
             </main>
         </div>

@@ -186,7 +186,8 @@
     &__item {}
 
     &__photo {
-        width: 100%;
+        width  : 100%;
+        display: block;
     }
 }
 
@@ -194,13 +195,14 @@
     display        : flex;
     justify-content: space-between;
     align-items    : center;
+    border-bottom  : 1px solid var(--color-grey-light-4);
 
     &__heading {
         font-size     : 2.25rem;
         font-weight   : 400;
         color         : var(--color-grey-dark-2);
         text-transform: uppercase;
-        padding       : 1rem 1.5rem;
+        padding       : 1rem 2rem;
     }
 
     &__star {
@@ -211,14 +213,50 @@
     &__star-icon {
         height: 1.5rem;
         width : 1.5rem;
-        fill: var(--color-primary);
+        fill  : var(--color-primary);
     }
 
     &__location {
-        margin-right: 2rem;
-        font-size: 1.2rem;
-        color: var(--color-primary);
-        border-bottom: 1px solid var(--color-primary);
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        margin-right   : 2rem;
+
+
+        &-icon {
+            width : 1.8rem;
+            height: 1.8rem;
+            fill  : var(--color-primary);
+        }
+
+        & button {
+            border          : none;
+            font-size       : 1.2rem;
+            color           : var(--color-primary);
+            border-bottom   : var(--line);
+            cursor          : pointer;
+            background-color: transparent;
+        }
+
+        &:hover {
+            animation    : location-animated 1s linear infinite;
+            border-radius: 4px;
+        }
+    }
+
+    @keyframes location-animated {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform : scale(1.05);
+            box-shadow: 0.5rem .5rem 2rem rgba(0, 0, 0, .3);
+        }
+
+        100% {
+            transform: scale(1);
+        }
     }
 
     &__rating {
@@ -228,7 +266,7 @@
         background-color: var(--color-primary);
         align-self      : stretch;
         padding         : 0 1rem;
-        color: var( --color-grey-light-2);
+        color           : var(--color-grey-light-2);
     }
 
     &__rating-average {
@@ -236,7 +274,7 @@
     }
 
     &__rating-count {
-        font-size: .8rem;
+        font-size     : .8rem;
         text-transform: uppercase;
     }
 }
