@@ -13,6 +13,7 @@
     justify-content : space-between;
     align-items     : center;
     border-bottom   : var(--line);
+    z-index         : 100;
 }
 
 .content {
@@ -44,7 +45,7 @@
 
 .decription {
     flex            : 0 0 60%;
-    margin-right    : 3rem;
+    margin-right    : 2rem;
     padding         : 1.6rem;
     background-color: var(--color-grey-light-1);
 
@@ -52,6 +53,7 @@
 
 .paragraph {
     margin-bottom: 1.6rem;
+    font-size    : 1.4rem;
 }
 
 .list-services {
@@ -87,9 +89,28 @@
 }
 
 .recommend {
-    &__count {}
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
 
-    &__friends {}
+    &__count {
+        font-size   : 1.2rem;
+        margin-right: auto;
+        ;
+    }
+
+    &__friend {
+        &-photo {
+            height       : 4rem;
+            border-radius: 50%;
+            border       : 3px solid #fff;
+
+            &:not(:first-child) {
+                margin-left: -2rem;
+            }
+
+        }
+    }
 }
 
 .user-review {
@@ -97,4 +118,9 @@
     background-color: var(--color-grey-light-4);
 }
 
-.cta {}
+.cta {
+    text-transform: uppercase;
+    font-weight   : 300;
+    color         : var(--color-grey-dark-3);
+    text-align    : center;
+}

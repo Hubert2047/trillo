@@ -63,7 +63,7 @@ body {
   font-family: 'open sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color--primary-dark));
+  background-image: linear-gradient(to left bottom, var(--color-primary-light), var(--color--primary-dark));
   height: 100vh; }
 
 .container {
@@ -79,7 +79,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: var(--line); }
+  border-bottom: var(--line);
+  z-index: 100; }
 
 .content {
   display: flex; }
@@ -105,12 +106,13 @@ body {
 
 .decription {
   flex: 0 0 60%;
-  margin-right: 3rem;
+  margin-right: 2rem;
   padding: 1.6rem;
   background-color: var(--color-grey-light-1); }
 
 .paragraph {
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem; }
 
 .list-services {
   display: flex;
@@ -136,9 +138,29 @@ body {
       -webkit-mask-image: url(../img/chevron-thin-right.svg);
       -webkit-mask-size: cover; }
 
+.recommend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .recommend__count {
+    font-size: 1.2rem;
+    margin-right: auto; }
+  .recommend__friend-photo {
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff; }
+    .recommend__friend-photo:not(:first-child) {
+      margin-left: -2rem; }
+
 .user-review {
   flex: 1;
   background-color: var(--color-grey-light-4); }
+
+.cta {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--color-grey-dark-3);
+  text-align: center; }
 
 .logo {
   height: 3rem;
@@ -179,6 +201,27 @@ body {
   .search__icon {
     height: 2rem;
     width: 2rem; }
+
+.btn-inline {
+  border: none;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  cursor: pointer;
+  background-color: transparent;
+  display: inline-block; }
+
+.btn-inline--animated {
+  transition: all .2s;
+  margin: auto; }
+  .btn-inline--animated span {
+    margin-left: 3px;
+    transition: all .2s; }
+  .btn-inline--animated:hover {
+    color: var(--color-grey-dark-1);
+    border-bottom: 1px solid var(--color-grey-dark-1); }
+    .btn-inline--animated:hover span {
+      margin-left: 8px; }
 
 .user-nav {
   display: flex;
@@ -293,13 +336,6 @@ body {
       width: 1.8rem;
       height: 1.8rem;
       fill: var(--color-primary); }
-    .overview__location button {
-      border: none;
-      font-size: 1.2rem;
-      color: var(--color-primary);
-      border-bottom: var(--line);
-      cursor: pointer;
-      background-color: transparent; }
     .overview__location:hover {
       animation: location-animated 1s linear infinite;
       border-radius: 4px; }
@@ -325,3 +361,136 @@ body {
   .overview__rating-count {
     font-size: .8rem;
     text-transform: uppercase; }
+
+.user-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-grey-dark-4); }
+  .user-review > :not(:last-child) {
+    margin-bottom: 3rem; }
+  .user-review .review {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden; }
+    .user-review .review__text {
+      margin-bottom: 1.6rem;
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 10;
+      text-align: justify; }
+    .user-review .review__user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .user-review .review__user > :not(:last-child) {
+        margin-right: 2rem; }
+      .user-review .review__user-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; }
+      .user-review .review__user-photo {
+        height: 4rem;
+        border-radius: 50%; }
+      .user-review .review__user-name {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 600; }
+      .user-review .review__user-date {
+        font-size: 1rem; }
+      .user-review .review__user-rating {
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--color-primary);
+        margin-right: auto; }
+    .user-review .review::before {
+      content: "\201C";
+      display: block;
+      font-size: 20rem;
+      position: absolute;
+      top: -2.75rem;
+      left: -.75rem;
+      line-height: 1;
+      color: var(--color-grey-light-2);
+      font-family: sans-serif; }
+
+.cta {
+  padding: 4rem;
+  background-color: var(--color-grey-light-2); }
+  .cta__book-now {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase; }
+
+.btn {
+  font-size: 1.5rem;
+  background: linear-gradient(to right, var(--color-primary-light), var(--color--primary-dark));
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  animation: cta-bnt-animated 2s linear infinite;
+  z-index: 13; }
+  .btn__visible {
+    padding: 1.5rem 6rem;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .3s;
+    z-index: 20;
+    position: relative; }
+  .btn__invisible {
+    position: absolute;
+    padding: 1.5rem;
+    display: inline-block;
+    left: 0;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    transition: all .3s;
+    z-index: 11; }
+  .btn:hover .btn__invisible {
+    top: 0; }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 104%;
+    height: 25px;
+    background: #fff;
+    animation: anim 3s linear infinite; }
+  .btn::after {
+    content: "";
+    display: block;
+    background: linear-gradient(to right, var(--color-primary-light), var(--color--primary-dark));
+    position: absolute;
+    border-radius: 10px;
+    inset: 1.5px;
+    z-index: 10; }
+
+@keyframes anim {
+  0% {
+    transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes cta-bnt-animated {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.3); }
+  100% {
+    transform: scale(1); } }
