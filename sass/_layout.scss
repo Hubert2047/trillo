@@ -20,6 +20,13 @@
     align-items     : center;
     border-bottom   : var(--line);
     z-index         : 100;
+
+    @media only screen and (max-width:$bp-medium) {
+        position: fixed;
+        top     : 0;
+        left    : 0;
+        width: 100%;
+    }
 }
 
 .content {
