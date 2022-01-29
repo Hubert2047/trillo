@@ -91,6 +91,10 @@
 .paragraph {
     margin-bottom: 1.6rem;
     font-size    : 1.4rem;
+
+    &::first-letter {
+        font-size: 2rem;
+    }
 }
 
 .list-services {
