@@ -433,16 +433,88 @@ body {
       display: none; } }
 
 .gallery {
-  display: flex; }
+  display: flex;
+  align-items: stretch; }
+  .gallery__item {
+    background-color: var(--color-grey-light-1); }
+    .gallery__item:not(:last-child) {
+      padding-right: .5rem; }
   .gallery__photo {
     width: 100%;
-    display: block; }
+    display: block;
+    margin-bottom: 1rem; }
+  .gallery__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem; }
+  .gallery__heading {
+    display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__heading {
+        flex-direction: column;
+        justify-content: start; }
+        .gallery__heading > * {
+          margin-right: auto; } }
+  .gallery__name {
+    font-size: 1.3rem;
+    margin-right: 1rem; }
+  .gallery__star-icon {
+    height: .8rem;
+    width: .8rem;
+    margin-right: auto;
+    fill: var(--color--primary-dark); }
+  .gallery__direction {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: var(--color-grey-dark-1); }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__direction {
+        flex-direction: column;
+        justify-content: start; }
+        .gallery__direction > * {
+          margin-right: auto; } }
+  .gallery__address {
+    border-bottom: 1px solid; }
+  .gallery__show-map {
+    border: none;
+    border-bottom: 1px solid;
+    background-color: transparent;
+    font-size: 1rem; }
+    .gallery__show-map-icon {
+      height: 1rem;
+      width: 1rem;
+      fill: currentColor; }
+    .gallery__show-map:hover {
+      animation: location-animated 1s linear infinite;
+      border-radius: 4px; }
+  .gallery__discription {
+    font-size: 1.1rem;
+    text-align: justify; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__discription {
+        font-size: 1rem; } }
+    @media only screen and (max-width: 25em) {
+      .gallery__discription {
+        font-size: .8rem; } }
+  .gallery__booked {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-top: auto; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__booked {
+        font-size: 1.1rem; } }
+    @media only screen and (max-width: 25em) {
+      .gallery__booked {
+        font-size: 1rem; } }
 
 .overview {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-4); }
+  border-bottom: 1px solid var(--color-grey-light-4);
+  border-top: 1px solid var(--color-grey-light-4); }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 400;
