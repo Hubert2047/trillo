@@ -110,17 +110,20 @@
         align-items  : center;
 
         &::before {
-            content            : "";
-            display            : inline-block;
-            width              : 1rem;
-            height             : 1rem;
-            margin-right       : .5rem;
-            // background-image: url(../img/chevron-thin-right.svg);
-            // background-size: cover;
-            background-color   : var(--color-primary);
-            -webkit-mask-image : url(../img/chevron-thin-right.svg);
-            -webkit-mask-size  : cover;
+            content         : "";
+            display         : inline-block;
+            width           : 1rem;
+            height          : 1rem;
+            margin-right    : .5rem;
+            background-image: url(../img/chevron-thin-right.svg);
+            background-size : cover;
 
+            @supports (-webkit-mask-image : url())or(mask-image : url()) {
+                background-color  : var(--color-primary);
+                -webkit-mask-image: url(../img/chevron-thin-right.svg);
+                -webkit-mask-size : cover;
+                background-image  : none;
+            }
         }
     }
 }

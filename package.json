@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compress:css": "node-sass css/style.css css/style.css --output-style compressed"
+
   },
   "author": "",
   "license": "ISC",
