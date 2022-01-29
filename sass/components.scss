@@ -111,14 +111,45 @@
     }
 
     &__icon-box {
-        position: relative;
+        position     : relative;
+        border-radius: 1px;
+
+        &::after {
+            content         : ""attr(id)"";
+            color           : #fff;
+            text-align      : center;
+            text-transform  : capitalize;
+            display         : block;
+            height          : 4rem;
+            width           : 200%;
+            position        : absolute;
+            top             : 0;
+            left            : -50%;
+            border-radius   : 10px;
+            background-color: rgba(57, 57, 58, .8);
+            z-index         : 100;
+            line-height     : 4rem;
+            font-weight     : 700;
+            display         : none;
+            transition      : all .2s;
+
+            @media only screen and (max-width:$bp-medium) {
+                color           : rgb(57, 57, 58);
+                background-color: rgba(238, 230, 230, .9);
+            }
+        }
+
+        &:hover::after {
+            display: block;
+            top    : 100%;
+        }
     }
+
 
     &__icon {
         height: 2.25rem;
         width : 2.25rem;
         fill  : var(--color-grey-dark-2);
-
     }
 
     &__notification {
@@ -132,9 +163,41 @@
         right           : .8rem;
         text-align      : center;
 
+
     }
 
-    &__user {}
+    &__user {
+        position: relative;
+
+        &::after {
+            content         : ""attr(id)"";
+            color           : #fff;
+            text-align      : center;
+            text-transform  : capitalize;
+            height          : 4rem;
+            width           : 120%;
+            position        : absolute;
+            top             : 0;
+            left            : -10%;
+            border-radius   : 10px;
+            background-color: rgba(57, 57, 58, .8);
+            z-index         : 100;
+            line-height     : 4rem;
+            font-weight     : 700;
+            display         : none;
+            transition      : all .2s;
+
+            @media only screen and (max-width:$bp-medium) {
+                color           : rgb(57, 57, 58);
+                background-color: rgba(238, 230, 230, .9);
+            }
+        }
+
+        &:hover::after {
+            display: block;
+            top    : 100%;
+        }
+    }
 
     &__user-photo {
         height       : 3.5rem;
@@ -402,10 +465,11 @@
             font-size    : 1.2rem;
             position     : relative;
             z-index      : 10;
-            text-align   : justify;    
+            text-align   : justify;
+
             &::first-letter {
-                font-size    : 2rem;
-            } 
+                font-size: 2rem;
+            }
         }
 
         &__user {
@@ -484,6 +548,7 @@
     @media only screen and (max-width:$bp-medium) {
         padding: 2rem;
     }
+
     @media only screen and (max-width:$bp-very-small) {
         padding: 1rem;
     }
@@ -502,8 +567,9 @@
     overflow      : hidden;
     animation     : cta-bnt-animated 2s linear infinite;
     z-index       : 13;
+
     @media only screen and (max-width:$bp-very-small) {
-        font-size     : .9rem;
+        font-size: .9rem;
     }
 
     &>* {
