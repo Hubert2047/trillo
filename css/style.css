@@ -484,7 +484,8 @@ body {
         flex-direction: column;
         justify-content: start; }
         .gallery__direction > * {
-          margin-right: auto; } }
+          margin-right: auto;
+          margin-bottom: .5rem; } }
   .gallery__address {
     border-bottom: 1px solid; }
   .gallery__show-map {
