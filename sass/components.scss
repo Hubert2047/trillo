@@ -333,21 +333,26 @@
         width        : 100%;
         display      : block;
         margin-bottom: 1rem;
+        &:hover {
+            animation: gallery-photo-animated 1.5s;
+        }
     }
 
     &__information {
-        display       : flex;
-        flex-direction: column;
+        display        : flex;
+        flex-direction : column;
         justify-content: space-between;
-        padding: .5rem;
+        padding        : .5rem;
     }
 
 
     &__heading {
         display: flex;
-        @media only screen and (max-width:$bp-medium){
-            flex-direction: column;
+
+        @media only screen and (max-width:$bp-medium) {
+            flex-direction : column;
             justify-content: start;
+
             &>* {
                 margin-right: auto;
             }
@@ -368,14 +373,22 @@
         }
     }
 
+    &__caption {
+        &>* {
+            margin-bottom: .8rem;
+        }
+    }
+
     &__direction {
         display        : flex;
         justify-content: space-between;
         font-size      : 1rem;
         color          : var(--color-grey-dark-1);
-        @media only screen and (max-width:$bp-medium){
-            flex-direction: column;
+
+        @media only screen and (max-width:$bp-medium) {
+            flex-direction : column;
             justify-content: start;
+
             &>* {
                 margin-right: auto;
             }
@@ -409,10 +422,16 @@
     &__discription {
         font-size : 1.1rem;
         text-align: justify;
-        @media only screen and (max-width:$bp-medium){
+
+        &::first-letter {
+            font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width:$bp-medium) {
             font-size: 1rem;
         }
-        @media only screen and (max-width:$bp-very-small){
+
+        @media only screen and (max-width:$bp-very-small) {
             font-size: .8rem;
         }
     }
@@ -421,12 +440,28 @@
         font-size : 1.3rem;
         color     : var(--color-primary);
         margin-top: auto;
-        @media only screen and (max-width:$bp-medium){
+
+        @media only screen and (max-width:$bp-medium) {
             font-size: 1.1rem;
         }
-        @media only screen and (max-width:$bp-very-small){
+
+        @media only screen and (max-width:$bp-very-small) {
             font-size: 1rem;
         }
+    }
+}
+
+@keyframes gallery-photo-animated {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 
