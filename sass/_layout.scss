@@ -129,7 +129,7 @@
             background-image: url(../img/chevron-thin-right.svg);
             background-size : cover;
 
-            @supports (-webkit-mask-image : url())or(mask-image : url()) {
+            @supports (-webkit-mask-image : url())or((-webkit-mask-image: url()) or (mask-image: url())) {
                 background-color  : var(--color-primary);
                 -webkit-mask-image: url(../img/chevron-thin-right.svg);
                 -webkit-mask-size : cover;
