@@ -93,9 +93,9 @@
 }
 
 .btn--flicker:hover {
-    -webkit-animation    : location-animated 1s linear infinite;
-            animation    : location-animated 1s linear infinite;
-    border-radius: 4px;
+    -webkit-animation: location-animated 1s linear infinite;
+    animation        : location-animated 1s linear infinite;
+    border-radius    : 4px;
 }
 
 .user-nav {
@@ -342,7 +342,7 @@
 
         &:hover {
             -webkit-animation: gallery-photo-animated 1.5s;
-                    animation: gallery-photo-animated 1.5s;
+            animation        : gallery-photo-animated 1.5s;
         }
     }
 
@@ -508,10 +508,10 @@
 }
 
 .overview {
-    display        : flex;
-    justify-content: space-between;
-    align-items    : center;
-    border-bottom  : 1px solid var(--color-grey-light-4);
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    border-bottom   : 1px solid var(--color-grey-light-4);
     background-color: #FFF8F3;
 
     &__heading {
@@ -562,9 +562,9 @@
         }
 
         &:hover {
-            -webkit-animation    : location-animated 1s linear infinite;
-                    animation    : location-animated 1s linear infinite;
-            border-radius: 4px;
+            -webkit-animation: location-animated 1s linear infinite;
+            animation        : location-animated 1s linear infinite;
+            border-radius    : 4px;
         }
     }
 
@@ -753,19 +753,19 @@
 }
 
 .btn {
-    font-size     : 1.5rem;
-    background    : linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
-    border        : none;
-    border-radius : 100px;
-    cursor        : pointer;
-    text-transform: uppercase;
-    color         : #fff;
-    font-weight   : 400;
-    position      : relative;
-    overflow      : hidden;
-    -webkit-animation     : cta-bnt-animated 2s linear infinite;
-            animation     : cta-bnt-animated 2s linear infinite;
-    z-index       : 13;
+    font-size        : 1.5rem;
+    background       : linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    border           : none;
+    border-radius    : 100px;
+    cursor           : pointer;
+    text-transform   : uppercase;
+    color            : #fff;
+    font-weight      : 400;
+    position         : relative;
+    overflow         : hidden;
+    -webkit-animation: cta-bnt-animated 2s linear infinite;
+    animation        : cta-bnt-animated 2s linear infinite;
+    z-index          : 13;
 
     @media only screen and (max-width:$bp-very-small) {
         font-size: .9rem;
@@ -811,16 +811,16 @@
     }
 
     &::before {
-        content      : '';
-        position     : absolute;
-        top          : 50%;
-        left         : 50%;
-        width        : 104%;
-        height       : 25px;
-        border-radius: 100px;
-        background   : #fff;
-        -webkit-animation    : anim 3s linear infinite;
-                animation    : anim 3s linear infinite;
+        content          : '';
+        position         : absolute;
+        top              : 50%;
+        left             : 50%;
+        width            : 104%;
+        height           : 25px;
+        border-radius    : 100px;
+        background       : #fff;
+        -webkit-animation: anim 3s linear infinite;
+        animation        : anim 3s linear infinite;
 
     }
 
@@ -919,11 +919,11 @@
     }
 
     &__slider {
-        width    : 100%;
-        height   : 100%;
-        position : absolute;
+        width            : 100%;
+        height           : 100%;
+        position         : absolute;
         -webkit-animation: sidershow 10s linear infinite;
-                animation: sidershow 10s linear infinite;
+        animation        : sidershow 10s linear infinite;
 
         &.s1 {
             top : 0rem;
@@ -951,11 +951,11 @@
         }
 
         &-img {
-            width     : 100%;
-            height    : 100%;
+            width        : 100%;
+            height       : 100%;
             -o-object-fit: cover;
-               object-fit: cover;
-            display   : block;
+            object-fit   : cover;
+            display      : block;
         }
     }
 
@@ -988,9 +988,10 @@
     }
 
     &__name {
-        font-size: 2.2rem;
-        border   : none;
-        font     : 300;
+        font-size       : 2.2rem;
+        border          : none;
+        background-color: transparent;
+        font-weight     : 300;
 
     }
 
@@ -1056,10 +1057,10 @@
         }
 
         &-discount {
-            font-size  : 3rem;
-            color      : var(--color-primary-light);
-            font-weight: 600;
-            margin     : 0 1rem;
+            font-size       : 3rem;
+            color           : var(--color-primary-light);
+            font-weight     : 600;
+            margin          : 0 1rem;
             background-image: line;
         }
 
@@ -1186,6 +1187,7 @@
         margin-left: -400%;
     }
 }
+
 @keyframes sidershow {
     20% {
         margin-left: 0;
