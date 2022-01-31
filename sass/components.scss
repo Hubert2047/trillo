@@ -910,11 +910,16 @@
         height        : 30rem;
         width         : 50rem;
         position      : relative;
-        overflow      : hidden;
+        overflow      : hidden;ad
         border-radius : 3px;
         outline       : 3px solid var(--color-primary-dark);
         outline-offset: .5rem;
         transition    : all .2s;
+
+        @media only screen and (max-width:$bp-very-small) {
+            height: 25rem;
+            width : 40rem;
+        }
 
     }
 
